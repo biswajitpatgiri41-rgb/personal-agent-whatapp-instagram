@@ -1,0 +1,1 @@
+import {env} from '@/lib/env'; export const dynamic='force-dynamic'; export async function GET(){return Response.json({ok:true,service:'personal-ai-reply-agent',queue:env.QUEUE_PROVIDER,geminiConfigured:Boolean(env.GEMINI_API_KEY),whatsappConfigured:Boolean(env.WHATSAPP_ACCESS_TOKEN),instagramConfigured:Boolean(env.INSTAGRAM_ACCESS_TOKEN),timestamp:new Date().toISOString()})}

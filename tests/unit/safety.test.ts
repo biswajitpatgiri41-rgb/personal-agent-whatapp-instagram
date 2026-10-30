@@ -1,0 +1,1 @@
+import {describe,it,expect} from 'vitest'; import {classify,shouldSend} from '@/lib/ai/safety'; describe('safety engine',()=>{it('blocks high risk',()=>{expect(classify('Please send me your OTP')).toBe('HIGH_RISK');expect(shouldSend('HIGH_RISK')).toBe(false)});it('allows routine',()=>expect(shouldSend(classify('Hey, how are you?'))).toBe(true))});
